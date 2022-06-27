@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+      $("input").focus(function(event) {
+        console.log(this);
+        console.log(event);
+      });
+      $("input").blur(function(event) {
+        console.log(this);
+        console.log(event);
+      });
+      $("button").click(function() {
+        $("img").attr({width: "120", height: "80"});
+      });
+      $("button.clk").click(function() {
+        $("img").attr("width",function(n, v) {
+          return v - 50;
+        });
+      });
+    });
+    </script>
+  </head>
+  <body>
+    <img src="images/entrance.jpeg" alt="image" width="290" height="200"><br><br>
+    <button>Set width and height attributes of the image</button><br><br>
+    <button class="clk">Set height attributes of the image</button><br><br>
+    <label>Name:</label>
+    <input type="text" id="Name" name="pin" size="10" />
+  </body>
+</html>
