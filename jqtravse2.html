@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <style>
+    .ancestors * {
+      display: block;
+      border: 2px solid lightgrey;
+      color: lightgrey;
+      padding: 5px;
+      margin: 15px;
+    }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("span").parents().css({"color": "blue", "border": "2px solid blue"});
+      $("li.start").next().css({"color": "blue", "border": "2px solid blue"});
+    });
+    </script>
+  </head>
+  <body class="ancestors">This is main body
+    <div style="width:500px;">This is div
+      <ul>This is ul
+        <li>This is li
+          <span>This is span</span>
+        </li>
+        <li class="start">This is li with start</li>
+        <li>This is li next after start</li>
+        <li>This is last li</li>
+      </ul>
+    </div>
+  </body>
+</html>
