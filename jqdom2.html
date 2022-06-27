@@ -1,0 +1,21 @@
+<html>
+   <head>
+      <h2>Using Jquery DOM Element</h2>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script>
+         $(document).ready(function() {
+            $("#txt").click(function(){
+               alert($("p").text());
+            });
+            $("#htm").click(function(){
+               alert($("p").html());
+            });
+         });
+      </script>
+   </head>
+   <body>
+      <p>Check <strong> Paragraph is displaying </strong> in the normal text or with tag</p>
+      <button id="txt">Get Text</button>
+      <button id="htm">Get HTML</button>
+   </body>
+</html>
